@@ -1,21 +1,55 @@
  
  *{ 
     background-color:rgb(255, 255, 255);
-   
  }
 
+ body, html{
+  margin: 5px;
+  font-family: Arial;
+ }
+ 
+ .header{
+  display:grid;
+  grid-template-rows: 1fr;;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space between;
   
+ }
 
- .sinbal{ 
-   color:black;
+ .left-icons{
+  font-size: 25px;
+  margin-top: 15px;
+  margin-left: 10px;
+ }
+
+
+ #logo{ 
+   color:rgb(0, 0, 0);
    font-size:50px;
-   text-align: center;
-   
-   
+   text-align: center;;
+   text-decoration:none;
+ }
+
+ .right-icons{
+  font-size: 25px;
+  margin-top: 15px;
+  margin-left: 75px;
  }
 
  .searchbar{
    color:gray;
+   border-style: solid;
+   text-align:center;
+   width: 100%;
+   margin-top:0;
+   
+
+
+   
+ }
+
+ .hovedbilde{
+    width:100%
  }
 
  .kategorier{
