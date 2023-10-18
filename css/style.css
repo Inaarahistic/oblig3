@@ -1,9 +1,28 @@
  
  *{ 
-    background-color:burlywood;
-
+    background-color:rgb(255, 255, 255);
+   
  }
 
+  
+
+ .sinbal{ 
+   color:black;
+   font-size:50px;
+   text-align: center;
+   
+   
+ }
+
+ .searchbar{
+   color:gray;
+ }
+
+ .kategorier{
+   color:blanchedalmond;
+   text-align:center;
+   
+ }
 
 
  
