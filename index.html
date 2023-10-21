@@ -1,55 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8"/>
+        <meta charset="UTF-8">
         <link rel="stylesheet" href="css/style.css" type="text/css">
         <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" type="text/css"> 
         <script src="https://kit.fontawesome.com/454e802897.js" crossorigin="anonymous"></script>
         <title>Sinbal</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Limelight&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
-
     <body>
-        
+        <div id="grid-container">
             <header class="header">
-                <section class="left-icons">
-                <i class="fa-solid fa-bars"></i>
-                <i class="fa-solid fa-user"></i>
+                    <nav>
+                        <ul class="icons">
+                            <li class="bars"><i class="fa-solid fa-bars"></i>
+                            <li class="user"><i class="fa-solid fa-user"></i>
+                            <li><a href="http://127.0.0.1:5500/index.html" id="logo">Sinbal</a></li>
+                            <li class="heart"><i class="fa-regular fa-heart"></i></li>
+                            <li class="cart"><i class="fa-solid fa-cart-shopping"></i></li>
+                        </ul>
+                    </nav>
+                    <form>
+                        <input type="text" placeholder="Hva leter du etter?" name="search">
+                        <input type="submit" value="Søk">
+                    </form>
+            </header>
+            <main>
+                <img class="hovedbilde" src="img/placeholder.svg" alt="grå bilde">
+                <h2 class="kategorier">KATEGORIER</h2>
+                <section class="navbar">
+                    <section class="menn">
+                        <a href="#">Menn</a>
+                        <i class="fa-solid fa-person"></i>
+                    </section>
+                    <section class="kvinner">
+                        <a href="#">Kvinner</a>
+                        <i class="fa-solid fa-person-dress"></i>
+                    </section>
+                    <section class="gym">
+                        <a href="#">Gym</a>
+                        <i class="fa-solid fa-dumbbell"></i>
+                    </section>
+                    <section class="tur">
+                        <a href="#">Tur
+                            <i class="fa-solid fa-person-hiking"></i>
+                    </section>
+                    <section class="formell">
+                        <a href="#">Formell</a>
+                        <i class="fa-solid fa-user-tie"></i>
+                    </section>
                 </section>
                 <section>
-                <a href="#" id="logo">Sinbal</a>
+                    <h3>Nyhet!</h3>
+                    <p>Paneer monterey jack feta. Halloumi cheesecake cheese slices babybel cheese strings blue castello swiss stinking bishop. Squirty cheese cheesy grin ricotta cheese and wine caerphilly cheese strings macaroni cheese goat. Cheddar port-salut babybel monterey jack hard cheese camembert de normandie fromage frais cheesecake. Cheesy grin pepper jack.</p>
                 </section>
-                <section class="right-icons">
-                <i class="fa-regular fa-heart"></i>
-                <i class="fa-solid fa-cart-shopping"></i>
+                <img class="bilde2"src="img/placeholder.svg" alt="grå bilde2">
+                <section>
+                    <h2>Salg!</h2>
+                    <p>Rubber cheese macaroni cheese bavarian bergkase. Cheddar cheeseburger cheese on toast ricotta queso squirty cheese cheese strings cheesy feet. Airedale fromage frais melted cheese fromage stinking bishop cream cheese cheese triangles brie. Everyone loves monterey jack.</p>
                 </section>
+            </main>
+            <footer>
+                    <ul class="footer-list">
+                        <li>&#8226; Om oss</li>
+                        <li>&#8226; Retur</li>
+                        <li>&#8226; Kontakt Oss</li>
+                        <li>&#8226; Ledige Stillinger</li>
+                    </ul>
+                    <section class="nyhetsbrev">
+                        <section class="nyhet-text">
+                            Abonner på vårt nyhetsbrev
+                        </section>
+                        <form>
+                            <input type="text" placeholder="Skriv din epost-adresse" name="epost">
+                            <input type="submit" value="Søk">
+                        </form>
+                    </section>
 
-                
-            </header>
-            
-        <main>
-            <p class="searchbar">
-                Hva leter du etter? 
-                <i class="fa-solid fa-magnifying-glass"></i>
-                </p>
-        
-            <img class="hovedbilde"src="img/placeholder.svg">
-
-            <ul class="navbar">
-                <h2>KATEGORIER</h2>
-                <li><a href="#">Menn</a></li>
-                <li><a href="#">Kvinner</a></li>
-                <li><a href="#">Gym</a></li>
-                <li><a href="#">Tur</li>
-                <li><a href="#">Formell</a></li>
-            </ul>
-
-            
-        
-        </main>
+            </footer>
+        </div>
     </body>
-
-
-
-
-
 </html>

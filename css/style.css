@@ -1,63 +1,255 @@
  
- *{ 
+*{ 
     background-color:rgb(255, 255, 255);
- }
-
- body, html{
-  margin: 5px;
-  font-family: Arial;
- }
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color:black;
+}
+#grid-container {
+  display: grid;
+  grid-template-areas: "header" "main" "footer";
+}
+body ul{
+  display:inline-block;
+  list-style:none;
+}
+header {
+  font-size: 1rem;
+  grid-area: header;
+  border-style:solid;
+  border-top:none;
+  border-left:none;
+  border-right:none;
+  border-width:1px;
+  margin:10px;
+}
+.icons{
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#logo{ 
+  display:flex;
+  justify-content:center;
+  font-size:30px;
+  text-decoration:none;
+  font-family:limelight;
+}
+header form{
+  height:30px;
+  display:flex;
+  justify-content: center;
+}
+header input[type="text"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  height:20px;
+}
+header input[type="submit"] {
+  background: rgb(235,204,204);
+  color: rgb(128, 93, 93);
+  border-style:solid;
+  border-width:1px;
+  border-color:rgb(169, 150, 150);
+  border-radius: 4px;
+  cursor: pointer;
+  width:70px;
+  height:20px;
+  font-size:10px;
+  display: flex;
+}
+main{
+  grid-area:main;
+}
+.hovedbilde{
+    width:100%;
+    margin:0;
+}
+.kategorier{
+   color:rgb(142, 97, 29);
+   text-align:center;
+   font-size: 1.5rem;
+   padding-bottom:10px;
+   margin:0;
+}
+main section{
+  padding: 10px;
+}
+.navbar{
+  display:flex;
+  justify-content:space-between;
+}
+.menn{
+  border-style:solid;
+  border-width:1px;
+  padding:5px;
+}
+.kvinner{
+  border-style:solid;
+  border-width:1px;
+  padding:5px;
+}
+.gym{
+  border-style:solid;
+  border-width:1px;
+  padding:5px;
+}
+.tur{
+  border-style:solid;
+  border-width:1px;
+  padding:5px;
+}
+.formell{
+  border-style:solid;
+  border-width:1px;
+  padding:5px;
+}
+h2{
+  margin-top:5px;
+  display:flex;
+  justify-content: center;
+  font-size: 20px;
+}
+.bilde2{
+  width:100%;
+  margin-top:1px;
+}
+footer{
+  display:flex;
+  grid-area:footer;
+  background-color: rgb(235,204,204);
+  padding-left:5px;
+  padding-right:5px;
+  padding-top:20px;
+  padding-bottom:20px;
+  margin-top:50px;
+  border-style:solid;
+  border-bottom:none;
+  border-left:none;
+  border-right:none;
+  border-width:1px;
+  width: 100%;
+  margin-bottom:0;
  
- .header{
-  display:grid;
-  grid-template-rows: 1fr;;
-  grid-template-columns: 1fr 1fr 1fr;
-  justify-content: space between;
+}
+footer ul{
+  background-color:rgb(235,204,204);
+  border-style:solid;
+  border-width:1px;
+  padding:10px;
+  margin:20px;
+  margin-left:5px;
+  border-left:none;
+  border-top:none;
+  border-bottom:none;
+  width:200px;
+  margin-right:70px;
+}
+footer li{
+  display:block;
+  background-color:rgb(235, 204, 204);
+}
+footer section{
+  background-color:rgb(235, 204, 204);
+  display:flex;
+  justify-content: center;
+}
+footer form{
+  background-color:rgb(235,204,204);
+}
+footer input[type="text"] {
+  padding: 10px;
+  border: 1px solid #6e4040;
+  border-radius: 4px;
+  outline: none;
+  height:20px;
+}
+footer input[type="submit"] {
+  background: rgb(235,204,204);
+  color: rgb(128, 93, 93);
+  border-style:solid;
+  border-width:1px;
+  border-color:rgb(169, 150, 150);
+  border-radius: 4px;
+  cursor: pointer;
+  width:70px;
+  height:20px;
+  font-size:10px;
+}
+.nyhetsbrev{
+  display: flex; 
+  flex-direction: column; 
+ 
+}
+
+@media only screen and (max-width: 500px) {
+
+  header nav {
+    float: left;
+ 
+  }
+  header form{
+    display:flex;
+    flex-direction:column;
+    width: 210px;
+    padding-left:30px;
+  }
   
- }
+  .kategorier{
+    float:left;
+    padding-left:15px;
+  }
 
- .left-icons{
-  font-size: 25px;
-  margin-top: 15px;
-  margin-left: 10px;
- }
+  .navbar{
+    float:left;
+  }
+  .menn, .kvinner, .gym, .tur{
+    margin-right:10px;
+  }
+  
+  main h3{
+    float:left;
+    width:100%;
+  }
+  main p{
+    width:100%;
+    float:left;
+    max-width:414px;
+  }
 
+  .nyhetsbrev{
+    float:left;
+    padding:0;
+    margin:0;
+  }
 
- #logo{ 
-   color:rgb(0, 0, 0);
-   font-size:50px;
-   text-align: center;;
-   text-decoration:none;
- }
+  footer ul{
+    margin:5px;
+    padding:0;
+    width:160px
+  }
 
- .right-icons{
-  font-size: 25px;
-  margin-top: 15px;
-  margin-left: 75px;
- }
-
- .searchbar{
-   color:gray;
-   border-style: solid;
-   text-align:center;
-   width: 100%;
-   margin-top:0;
-   
-
-
-   
- }
-
- .hovedbilde{
-    width:100%
- }
-
- .kategorier{
-   color:blanchedalmond;
-   text-align:center;
-   
- }
+  .nyhet-text{
+    display:flex;
+  }
 
 
- 
- 
+  
+
+
+
+
+
+/* @media (max-width: 1360px);
+
+@media (max-width: 980px);
+
+@media (max-width: 420px); */
+
+
+
