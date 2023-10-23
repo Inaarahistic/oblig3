@@ -26,6 +26,11 @@ header{
   font-size:1rem;
   grid-area:header;
   padding:4px;
+  border-style:solid;
+  border-width:1px;
+  border-top:none;
+  border-left:none;
+  border-right:none;
 }
 header ul{
   list-style: none;
@@ -186,7 +191,6 @@ footer input[type="submit"] {
     padding-left: 35px;
     padding-right:35px;
   }
-
   .navbar{
     display:flex;
     flex-direction:column;
@@ -200,26 +204,37 @@ footer input[type="submit"] {
   nav{
     grid-area:nav;
   }
+  .navbar{
+    padding:10px;
+  }
+  .menn, .kvinner, .gym, .tur, .formell{
+    margin:8px;
+  }
   .article1{
     grid-area:article1;
   }
   .article2{
     grid-area:article2;
   }
-
   .article3{
     grid-area:article3;
   }
   .img2{
     grid-area:img2;
   }
-
   footer{
     grid-area:footer;
+    display: flex;
+    justify-content: center;
     
   }
-
+  footer ul li{
+    display:inline;
+    padding: 20px
+  }
 }
+
+
 
 
 
@@ -336,53 +351,138 @@ footer{
 }
 
 /* MEDIA PRODUKTSIDE */
- 
+@media only screen and (min-width: 600px) {
+  #grid-container2{
+      margin:10px;
+      display:grid;
+      height:100vh;
+      grid-template-columns: 1fr 1fr 1fr 1fr ;
+      grid-template-rows: 0.9fr 0.3fr 0.9fr 0.9fr 0.9fr;
+      gap:10px;
+      grid-template-areas: 
+      "header header header header"
+      "filter-section filter-section filter-section filter-section"
+      "main main main main"
+      "pages2 pages2 pages2 pages2"
+      "footer footer footer footer";
+  }
 
+  header{
+    grid-area:header;
+  }
+  .filter-section{
+    grid-area:filter-section;
+    text-align:center;
+    padding: 10px;
+  }
+  .pages{
+    margin-right:40px;
+  }
+  main{
+    grid-area:main;
+  }
+  .pages2{
+    grid-area:pages2;
+    margin:10px;
+  }
+
+  footer{
+    grid-area:footer;
+    display: flex;
+    justify-content: center;
+  }
+  footer ul li{
+    display:inline;
+    padding: 20px
+  }
+}
 
 /*   RETURSIDE   */
 
 #grid-container3{
   display: grid;
   grid-template-columns:1fr;
-  grid-template-rows: 0.2fr 5fr 0.01fr ;
+  grid-template-rows: 0.2fr 0.3fr 5fr 0.01fr ;
   grid-template-areas: 
   "header"
+  "aside"
   "main"
   "footer";
   }
-
 header{
   grid-area:header;
 }
-
 aside{
+  grid-area:aside;
   float:left;
-  margin: 5px;
-  padding:15px;
-  border-style: solid;
+  border-style:solid;
   border-width:1px;
   border-top:none;
+  border-color:rgb(99, 87, 72);
+  padding-left:20px;
+  padding-bottom:20px;
+  margin-bottom:20px;
   border-left:none;
-  border-bottom:none;
-  border-color:#6e4040;
-  padding-top:50px;
-  padding-bottom:150px;
-  
 }
-
 h2{
   font-size:20px;
   margin-bottom:20px;
 }
-
-
 main{
   grid-area:main;
   margin-bottom:20px;
+}
+.cheese{
+  padding-bottom:15px;
 }
 footer{
   grid-area:footer;
 }
 
+/* MEDIA RETURSIDE */
+
+@media only screen and (min-width: 600px) {
+  #grid-container3{
+      margin:10px;
+      display:grid;
+      height:100vh;
+      grid-template-columns: 0.4fr 1fr 1fr 1fr ;
+      grid-template-rows: 0.4fr 0.3fr 0.9fr 0.9fr 0.4fr;
+      gap:10px;
+      grid-template-areas: 
+      "header header header header"
+      "aside main main main"
+      "aside main main main"
+      "aside main main main"
+      "footer footer footer footer";
+  }
+
+  header{
+    grid-area:header;
+  }
+  aside{
+    grid-area:aside;
+    border-bottom:none;
+    display: flex;
+    justify-content: center;
+    
+  }
+  aside li{
+    padding:15px;
+  }
+  main{
+    grid-area:main;
+  
+  }
+footer{
+  grid-area:footer;
+  display: flex;
+  justify-content: center;
+}
+footer ul li{
+  display:inline;
+  padding: 20px
+}
+}
 
 
