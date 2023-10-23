@@ -1,0 +1,46 @@
+
+#grid-container{
+  display:grid;
+  height:100vh;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas: 
+  "header header header header"
+  "img1 img1 img1 nav"
+  "article1 article2 img2 nav"
+  "foot foot foot foot"
+}
+
+.header{
+  grid-area:header;
+}
+.hovedbilde{
+  grid-area:img1
+}
+nav{
+  grid-area:nav;
+}
+.article1{
+  grid-area:article1;
+}
+.article2{
+  grid-area:article2;
+}
+.img2{
+  grid-area:img2;
+}
+footer{
+  grid-area:foot;
+}
+
+header{
+  width:100%
+}
+
+
+
+
+
+
+
+
